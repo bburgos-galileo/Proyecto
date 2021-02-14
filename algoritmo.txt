@@ -1,0 +1,59 @@
+Proceso cotización de seguro
+ Definir arreglo de recargos
+ Asignar valores de recargos edad18, edad25, edad50, hijos, propiedades, salario
+ Definir propiedades de objeto para registro de información: nombre, edad, casado, edad_conyuge, numeroHijos, salario, valor_propiedad
+ Definir precio_base tieneHijos, propiedad, calculo, total
+ Definir bandera //variable de control del ciclo
+ Asignar precio_base
+ Repetir
+  Escribir "Nombre";
+  Leer nombre
+  Escribir "Edad:";
+  Leer edad
+  edad > 18
+  Escribir "Estado Civil:";
+  Leer casado
+  casado = si
+   Escribir "Edad Conyuge:";
+   Leer edad_conyuge
+  Escribir "Tiene hijos:";
+  Leer tieneHijos
+  TieneHijos> 0
+   Escribir "Cuantos hijos tiene:";
+   Leer numeroHijos
+  Escribir "Valor Salario"
+  Leer Salario
+  Escribir "Tiene Propiedad:"
+  Leer Propiedad
+  Propiedad = si
+   Escribir "Valor Propiedad:"
+   Lee valorPropiedad
+  crea objeto con los valores y lo guarda en arrego
+  Escribir "Desea continuar s/n?";
+  Leer bandera;
+ Hasta Que bandera = false;
+ Recorre Arreglo que contiene objeto de registro
+  Si edad >= 18 y edad <= 24) 
+    calculo = precio_base * recargos.edad18;
+  Si edad >= 25 y edad <= 49
+    calculo = precio_base * recargos.edad25;
+  Si edad >= 50
+    calculo = precio_base * recargos.edad50;
+  Si Casado = si
+   Adiciona al calculo
+    Si edad >= 18 y edad <= 24) 
+     calculo = precio_base * recargos.edad18;
+    Si edad >= 25 y edad <= 49
+     calculo = precio_base * recargos.edad25;
+    Si edad >= 50
+     calculo = precio_base * recargos.edad50;
+  Si tiene hijos
+   Adiciona al calculo
+    precio_base * recargos.hijos * numeroHijos
+  Adicion al calculo
+   informacion.valorPropiedad * recargos.propiedades
+   informacion.salario * recargos.salario
+  Asignar
+   total = precio_base + calculo
+  Escribir "El recargo total sera de:", calculo
+  Escribir El valor de la cotizacion sera de:", total
