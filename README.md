@@ -4,6 +4,7 @@ Byron Othoniel Burgos Paniagua Carnet # IDE-9713763
 
 Considerar: 
  - El script fue creado utilizando Visual Studio Code.
+ - Se utilizó jQuery
  - Se uso el estándar ecmascript 6 de JavaScript.
  - El script fue dividido en varias funciones.
  - Se utilizó un arreglo para guardar los porcentajes de recargo.
